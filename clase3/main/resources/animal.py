@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from flask import request
+from flask import request, jsonify
 from main.models import AnimalModel
 from .. import db
 
@@ -48,10 +48,17 @@ class Animal(Resource): #A la clase animal le indico que va a ser del tipo recur
 class Animales(Resource):
     #obtener lista de los animales
     def get(self):
-        return ANIMALES
+        animales = db.session.query(AnimalModel).all()
+        return jsonify([animal.to_json() for animal in animales])
     #insertar recurso
     def post(self):
-        animal = request.get_json()
-        id = int(max(ANIMALES.keys()))+1
-        ANIMALES[id] = animal
-        return ANIMALES[id], 201
+        animal = AnimalModel.from_json(request.get_json())
+        db.session.add(animal)
+        db.session.commit()
+        print(animal)
+        return animal.to_json()
+        
+        # animal = request.get_json()
+        # id = int(max(ANIMALES.keys()))+1
+        # ANIMALES[id] = animal
+        # return ANIMALES[id], 201
