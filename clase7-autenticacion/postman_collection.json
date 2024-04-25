@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "fe6365ea-ec9d-40db-8b4f-b2d1441e7097",
+		"name": "Animales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Animales",
+			"item": [
+				{
+					"name": "Lista de animales",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MzEzNzM0NiwianRpIjoiZjMxNjljZWItZGZjMi00ZGJmLTgyZjEtNTMwZGNkMjA0ZDRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjgzMTM3MzQ2LCJleHAiOjE2ODMxNDA5NDYsInJvbCI6InVzZXJzIiwiaWQiOjEsImVtYWlsIjoicm9kcmlnby5iYXJ0b2xvbWVAdW0uZWR1LmFyIn0.iZv-vdrtMi_bBNsoiaPPO1dSQyeqgV8kapJ4n9sRZDc",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Peter\",\n    \"raza\": \"Caniche toy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/animales",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"animales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver un animales",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/animal/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar animal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"L Sancho\",\n    \"raza\": \"L Bulldog Frances\",\n    \"fechaNac\" : \"29-05-2002\",\n    \"exhibiciones\": [1,2] \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/animales",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"animales"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar animal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Sancho\",\n    \"raza\": \"Bulldog Frances\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/animal/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"animal",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar animal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Peter\",\n    \"raza\": \"Caniche toy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/animal/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"animal",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Historias Clinicas",
+			"item": [
+				{
+					"name": "Agregar Historia Clinica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\" : \"Visita por malestar A\",\n    \"id_animal\" : 2\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/historias",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"historias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista historias clinica",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:6003/historias",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"historias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ver una Historia Clinica",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MzEzNzc4NiwianRpIjoiYjJlYTQwNTktMDQ1NS00ZDJhLTgzYjQtNTVlYjA1ZmNmMDFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjgzMTM3Nzg2LCJleHAiOjE2ODMxNDEzODYsInJvbCI6ImFkbWluIiwiaWQiOjEsImVtYWlsIjoicm9kcmlnby5iYXJ0b2xvbWVAdW0uZWR1LmFyIn0.BOb_QdbRmfyxJdexL8H3ZXrnQP4z0SSwYqldPPdThWo",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:6003/historia/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"historia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exhibiciones",
+			"item": [
+				{
+					"name": "Agregar exhibición",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcion\": \"Exposicion Nacional\",\n    \"tipo\": \"Bellaza\",\n    \"puntaje_max\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/exhibiciones",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"exhibiciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista exhibiciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:6003/exhibiciones",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"exhibiciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"rodrigo.bartolome@um.edu.ar\",\n    \"password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"P Sancho\",\n    \"raza\": \"P Bulldog Frances\",\n    \"fechaNac\" : \"29-05-2002\",\n    \"email\" : \"rodrigo.bartolome2@um.edu.ar\",\n    \"password\" : \"123456\",\n    \"rol\": \"alumno\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:6003/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "6003",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
