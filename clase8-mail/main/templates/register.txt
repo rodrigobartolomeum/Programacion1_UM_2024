@@ -1,0 +1,7 @@
+Bienvenido {{animal.name}} {{animal.raza}}!
+
+Gracias por registrarte en nuestro sistema.
+
+Con nuestro servicio podras:
+
+- Ver tu historia clinica
