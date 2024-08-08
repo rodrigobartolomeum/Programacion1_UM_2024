@@ -1,0 +1,6 @@
+Crear una página HTML que contenga
+
+- Un título principal
+- Un subtítulo
+- Una lista de las 10 mejores series
+- Un video embebido de youtube
