@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Box Model</title>
+		<meta charset="utf-8">
+		<style>
+			.cuadro{
+				width:200px;
+				height:200px;
+				background-color:lightblue;
+				border:1px solid black;
+				display:inline-block;
+				
+			}
+			
+			.rectangulo{
+				background-color:lightblue;
+				border:1px solid black;
+				
+				
+			}
+			
+			.posicion{
+				background-color:yellow;
+			}
+			
+			.caja{
+				padding:10px;
+				margin:10px;
+				background-color:orange;
+				width:200px;
+				height:200px;
+			}
+			
+
+		</style>
+	</head>
+	<body>
+		<h1>Box model</h1>
+		
+		<h2>Márgenes</h2>
+		
+		<div class="cuadro" style="margin:20px"></div>
+		<div class="cuadro" style="margin:0px"></div>
+		<div class="cuadro" style="margin:30px 50px"></div>
+		<div class="cuadro" style="margin:5px 20px 3px 9px"></div>
+		<div class="cuadro" style="margin:3%"></div>
+		<div class="cuadro" style="margin-left:20px"></div>
+		<div class="cuadro" style="margin-right:20px"></div>
+		<div class="cuadro" style="margin-top:20px"></div>
+		<div class="cuadro" style="margin-bottom:-5px"></div>
+		
+		<h2>Padding</h2>
+		
+		<div class="cuadro" style="padding:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding:0px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding:30px 50px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding:5px 20px 3px 9px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding:3%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding-left:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding-right:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding-top:20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+		<div class="cuadro" style="padding-bottom:-5px">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque hendrerit, massa id dictum volutpat,
+	    arcu .</div>
+	    
+	    
+	    
+		<h2>Tamaño</h2>
+		
+		<div class="rectangulo" style="width:50px;height:50px;">Lorem ipsum dolor sit amet</div><br/><br/>
+		<div class="rectangulo" style="width:50px;height:50px;">L</div><br/><br/>
+		<div class="rectangulo" style="min-width:50px;min-height:50px;">Lorem ipsum dolor sit amet</div><br/><br/>
+		<div class="rectangulo" style="min-width:50px;min-height:50px;">L</div></br><br/>
+		<div class="rectangulo" style="max-width:50px;max-height:50px;">Lorem ipsum dolor sit amet</div><br/><br/>
+		<div class="rectangulo" style="max-width:50px;max-height:50px;">L</div>
+		
+		 
+		<h2>Tipos de caja</h2>
+		
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus 
+		 <div class="rectangulo" style="display:inline;width:500px;">Lorem ipsum dolor sit amet</div>nec, gravida aliquam odio. 
+		 <div class="rectangulo" style="display:inline;width:500px;">Lorem ipsum dolor sit amet</div>
+		 Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		<br/>
+		
+		
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus 
+		 <div class="rectangulo" style="display:inline-block;width:500px;">Lorem ipsum dolor sit amet</div>nec, gravida aliquam odio. 
+		 <div class="rectangulo" style="display:inline-block;width:500px;">Lorem ipsum dolor sit amet</div>
+		 Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		<br/>
+		
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus 
+		 <div class="rectangulo" style="display:none;">Lorem ipsum dolor sit amet</div>nec, gravida aliquam odio. 
+		 <div class="rectangulo" style="display:none">Lorem ipsum dolor sit amet</div>
+		 Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		<br/>
+		
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus 
+		 <div class="rectangulo" style="visibility:hidden;">Lorem ipsum dolor sit amet</div>nec, gravida aliquam odio. 
+		 <div class="rectangulo" style="visibility:hidden">Lorem ipsum dolor sit amet</div>
+		 Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		<br/>
+		
+		<div>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus 
+		 <div class="rectangulo" style="display:block;">Lorem ipsum dolor sit amet</div>nec, gravida aliquam odio. 
+		 <div class="rectangulo" style="display:block;">Lorem ipsum dolor sit amet</div>
+		 Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		
+		<h2>Desbordamiento</h2>
+		
+		<div class="cuadro">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>	
+		<div class="cuadro" style="overflow:hidden">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		<div class="cuadro" style="overflow:scroll">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+		 Cras lorem est, euismod a tellus Vestibulum feugiat lacinia sapien, eu mattis arcu rhoncus vitae.
+		 Quisque eleifend vel magna sed congue. Morbi id massa vehicula, elementum justo ut, luctus purus. Lorem ipsum dolor sit amet,
+		 consectetur adipiscing elit. 
+		</div>
+		
+		
+		<h2>Posición</h2>
+		<div class="cuadro posicion" style="position:fixed;bottom:0px;right:0px">Fijo</div>	
+		<div class="cuadro posicion" style="position:absolute;bottom:0px;right:0px">Absoluto</div>
+		<div class="cuadro posicion" style="position:relative;bottom:0px;right:0px">Relativo</div>
+		
+		<h2>Tamaño total</h2>
+		<div class="caja" style="box-sizing:content-box;"></div>	
+		<div class="caja" style="box-sizing:border-box;"></div>	
+		
+		
+		
+		
+	</body>
+</html>

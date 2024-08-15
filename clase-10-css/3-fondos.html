@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Fondos</title>
+		<meta charset="utf-8">
+		<style>
+			.cuadro{
+				width:1000px;
+				height:300px;
+				border:3px solid black;
+				margin:5px;
+				
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Fondos</h1>
+		
+		<h2>Color</h2>
+		
+		<div class="cuadro" style="background-color:blue;"></div>
+		<br/>
+		
+		<h2>Imagen</h2>
+		
+		<h3>Repetir imagen</h3>
+		<div class="cuadro" style="background-image:url('perro.jpeg');"></div>
+		<h3>Repetir imagen verticalmente</h3>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: repeat-x;"></div>
+		<h3>Repetir imagen horizontalmente</h3>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: repeat-y;"></div>
+		<h3>No repetir imagen</h3>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;"></div>
+		
+		<br/>
+		
+		<h2>Posición del fondo</h2>
+		
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-position:left bottom;"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-position:right top;"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-position:center center;"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-position:10% 80%;"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-position:200px 5px;"></div>
+		
+		<h2>Tamaño del fondo</h2>
+		
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-size:50% 20%"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-size:100px 50px"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-size:cover"></div>
+		<div class="cuadro" style="background-image:url('perro.jpeg');background-repeat: no-repeat;background-size:contain"></div>
+		<br/>
+	
+	   <h3>Fondo fijo</h3>
+	   <div class="cuadro" style="background-image:url('perro.jpeg');background-attachment:fixed;"></div>
+	   
+	</body>
+</html>

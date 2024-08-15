@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Selectores</title>
+		<meta charset="utf-8">
+		<style>
+			.enlace{
+				background-color:white;
+				color:black;
+				border: 1px solid black;
+				padding:5px;
+				border-radius:20px;
+				text-decoration:none;
+			}
+
+			.enlace:hover{
+				background-color:black;
+				color:white;
+				border: 1px solid white;
+
+			}
+
+			.enlace:visited{
+				background-color:red;
+				color:black;
+				border: 1px solid black;
+
+			}
+
+			.cuadro{
+				width:30px;
+				height:30px;
+				background-color:lightblue;
+				border:1px solid black;
+				display:inline-block;
+
+			}
+
+			.nhijos .cuadro:nth-of-type(4){
+				background-color:red;
+			}
+
+			.nhijos .cuadro:nth-of-type(2){
+				background-color:green;
+			}
+
+			.nhijos .cuadro:nth-last-of-type(2){
+				background-color:yellow;
+			}
+
+			.hijospares .cuadro:nth-of-type(even){
+				background-color:blue;
+			}
+
+			.hijosimpares .cuadro:nth-of-type(odd){
+				background-color:orange;
+			}
+
+			.hijosxn .cuadro:nth-of-type(3n){
+				background-color:grey;
+			}
+
+			ul{
+				list-style-type: none;
+			}
+
+
+
+			li::before
+			{
+				content:url(circulo.png);
+				padding-bottom:10px;
+			}
+
+				
+
+		</style>
+	</head>
+	<body>
+		<h1>Selectores</h1>
+
+		<h2>Enlaces</h2>
+
+		<a href="#" class="enlace">Esto es un enlace</a>
+
+		<h2>Elementos hijos</h2>
+		<div class="nhijos">
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+		</div>
+
+		<div class="hijospares">
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+		</div>
+
+		<div class="hijosimpares">
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+		</div>
+
+		<div class="hijosxn">
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+			<div class="cuadro"></div>
+		</div>
+
+		<ul>
+			<li>Elemento A</li>
+			<li>Elemento B</li>
+			<li>Elemento C</li>
+			<li>Elemento D</li>
+		</ul>
+
+		<br/>
+
+
+	</body>
+</html>
