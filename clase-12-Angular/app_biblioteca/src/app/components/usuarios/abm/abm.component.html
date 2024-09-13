@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">{{tipoOperacion}} Usuario {{user_id === 'null' ? '' : user_id}}</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <!-- Agrega más campos del formulario aquí -->
+            </form>
+            <div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button *ngIf="user_id === 'null'" type="button" class="btn btn-primary">Crear</button>
+                <button *ngIf="user_id !== 'null'" type="button" class="btn btn-primary">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>

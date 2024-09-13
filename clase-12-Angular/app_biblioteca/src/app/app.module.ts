@@ -11,6 +11,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { PrestamosComponent } from './pages/prestamos/prestamos.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
+import { UsuarioComponent } from './pages/usuario/usuario.component';
+import { AbmComponent } from './components/usuarios/abm/abm.component';
+import { VerUserComponent } from './components/usuarios/ver-user/ver-user.component';
+import { BarraBusquedaComponent } from './components/shared/barra-busqueda/barra-busqueda.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +26,17 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
     FooterComponent,
     LoginComponent,
     PrestamosComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    UsuarioComponent,
+    AbmComponent,
+    VerUserComponent,
+    BarraBusquedaComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

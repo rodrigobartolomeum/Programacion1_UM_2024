@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { PrestamosComponent } from './pages/prestamos/prestamos.component';
 import { LoginComponent } from './pages/login/login.component';
 
@@ -11,7 +12,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'prestamos', component: PrestamosComponent},
   { path: 'usuarios', component: UsuariosComponent},
-  { path: 'usuarios/:id/:rol', component: UsuariosComponent},
+  { path: 'usuario/:id/:tipo_op', component: UsuarioComponent},
   { path: 'error_page', component: ErrorPageComponent},
   
   { path: '', redirectTo: 'home', pathMatch: 'full'},

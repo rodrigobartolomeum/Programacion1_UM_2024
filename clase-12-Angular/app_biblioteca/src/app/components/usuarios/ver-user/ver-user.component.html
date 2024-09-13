@@ -1,0 +1,57 @@
+<div class="container-flex content background-image">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4">Lista de Usuarios</h2>
+            <div class="d-flex mb-3">  
+                <input type="text" (input)="buscar()" class="form-control me-2 flex-grow-1" [(ngModel)]="searchQuery" placeholder="Buscar usuario...">
+                <button class="btn btn-secondary" (click)="buscar()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <a class="btn btn-primary ms-2" routerLink="/usuario/null/Alta">
+                    <i class="fa-solid fa-plus"></i>
+                </a>
+                <!-- <button class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#nuevoUsuarioModal">
+                    <i class="fa-solid fa-plus"></i>
+                </button> -->
+            </div>
+            <ul class="list-group">
+                <li *ngFor="let usuario of filteredUsers" class="list-group-item d-flex justify-content-between align-items-center">
+                    <p>
+                        {{usuario.nombre}}
+                    </p>
+                    <div>
+                        <button class="btn btn-primary btn-sm me-2" (click)="editarusuario(usuario)" ><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- Modal para agregar nuevo usuario -->
+    <div class="modal fade" id="nuevoUsuarioModal" tabindex="-1" aria-labelledby="nuevoUsuarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nuevoUsuarioModalLabel">Agregar Nuevo Usuario</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario para cargar un nuevo usuario -->
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <!-- Agrega más campos del formulario aquí -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+  </div>
