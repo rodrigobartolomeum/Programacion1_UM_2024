@@ -11,14 +11,17 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" routerLink="/prestamos" href="#">Prestamos</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="isToken">
             <a class="nav-link" routerLink="/usuarios" href="#">Usuarios</a>
           </li>
         </ul>
         <form *ngIf="ver" class="d-flex">
-            <a class="nav-link" routerLink="/login" href="#">
+            <a *ngIf="!isToken" class="nav-link" routerLink="/login" href="#">
                 <i class="fa-solid fa-user"></i> Login
             </a>
+            <a *ngIf="isToken" class="nav-link" (click)="cerrarSesion()" href="#">
+              <i class="fa-solid fa-user"></i> Cerrar sesión
+          </a>
         </form>
       </div>
     </div>

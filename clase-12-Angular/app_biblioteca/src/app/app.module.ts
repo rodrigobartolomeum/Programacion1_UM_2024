@@ -15,7 +15,8 @@ import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { AbmComponent } from './components/usuarios/abm/abm.component';
 import { VerUserComponent } from './components/usuarios/ver-user/ver-user.component';
 import { BarraBusquedaComponent } from './components/shared/barra-busqueda/barra-busqueda.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

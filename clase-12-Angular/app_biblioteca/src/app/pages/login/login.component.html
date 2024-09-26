@@ -5,17 +5,18 @@
             <div class="card">
                 <div class="card-body">
                     <h2 class="card-title text-center">Iniciar sesión</h2>
-                    <form>
+                    <form [formGroup]="loginForm" >
                         <div class="mb-3">
                             <label for="email" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
+                            <input type="email" class="form-control" formControlName="email" id="email" placeholder="Tu correo electrónico">
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" class="form-control" id="password" placeholder="Tu contraseña">
+                            <input type="password" class="form-control" formControlName="password" id="password" placeholder="Tu contraseña">
                         </div>
-                        <a type="button" routerLink="/home" href="#" class="btn btn-secondary w-100">Ingresar</a>
+                        <!-- <a type="button" routerLink="/home" href="#" class="btn btn-secondary w-100">Ingresar</a> -->
                     </form>
+                    <button type="button" (click)="submit()" href="#" class="btn btn-secondary w-100">Ingresar</button>
                     <p class="mt-3 text-center">¿Aún no tienes una cuenta? <a routerLink="/home" href="#">Regístrate aquí</a></p>
                 </div>
             </div>

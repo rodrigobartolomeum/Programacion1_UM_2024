@@ -6,12 +6,12 @@ import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { UsuarioComponent } from './pages/usuario/usuario.component';
 import { PrestamosComponent } from './pages/prestamos/prestamos.component';
 import { LoginComponent } from './pages/login/login.component';
-
+import { authsessionGuard } from './guards/authsession.guard'
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'prestamos', component: PrestamosComponent},
-  { path: 'usuarios', component: UsuariosComponent},
+  { path: 'usuarios', component: UsuariosComponent, canActivate:[authsessionGuard]},
   { path: 'usuario/:id/:tipo_op', component: UsuarioComponent},
   { path: 'error_page', component: ErrorPageComponent},
   
